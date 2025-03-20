@@ -1,0 +1,56 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<configuration>-->
+
+<!--    &lt;!&ndash; Context Name (Optional) &ndash;&gt;-->
+<!--    <contextName>SpringBootApp</contextName>-->
+
+<!--    &lt;!&ndash; Define Properties (Log File Path) &ndash;&gt;-->
+<!--    <property name="LOG_PATH" value="logs" />-->
+<!--    <property name="LOG_FILE" value="${LOG_PATH}/app.log" />-->
+<!--    <property name="ARCHIVE_PATH" value="${LOG_PATH}/archive" />-->
+
+<!--    &lt;!&ndash; Console Appender &ndash;&gt;-->
+<!--    <appender name="My_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        &lt;!&ndash; Pattern Layout &ndash;&gt;-->
+<!--        <encoder>-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; File Appender with Rolling Policy &ndash;&gt;-->
+<!--    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--        &lt;!&ndash; Log File Path &ndash;&gt;-->
+<!--        <file>${LOG_FILE}</file>-->
+
+<!--        &lt;!&ndash; Rolling Policy for Log Rotation &ndash;&gt;-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            &lt;!&ndash; Archive Log Files &ndash;&gt;-->
+<!--            <fileNamePattern>${ARCHIVE_PATH}/app-%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>-->
+<!--            &lt;!&ndash; Roll File Based on Size &ndash;&gt;-->
+<!--            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+<!--                <maxFileSize>10MB</maxFileSize>-->
+<!--            </timeBasedFileNamingAndTriggeringPolicy>-->
+<!--            &lt;!&ndash; Keep 30 Days of Logs &ndash;&gt;-->
+<!--            <maxHistory>30</maxHistory>-->
+<!--            &lt;!&ndash; Total Size Cap for Archived Logs &ndash;&gt;-->
+<!--            <totalSizeCap>1GB</totalSizeCap>-->
+<!--        </rollingPolicy>-->
+
+<!--        &lt;!&ndash; Log File Pattern &ndash;&gt;-->
+<!--        <encoder>-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; Root Logger Configuration &ndash;&gt;-->
+<!--    <root level="INFO">-->
+<!--        <appender-ref ref="CONSOLE" />-->
+<!--        <appender-ref ref="FILE" />-->
+<!--    </root>-->
+
+<!--    &lt;!&ndash; Logger for Debug Level (For Specific Package) &ndash;&gt;-->
+<!--    <logger name="com.example.service" level="DEBUG" additivity="false">-->
+<!--        <appender-ref ref="FILE" />-->
+<!--    </logger>-->
+
+<!--</configuration>-->

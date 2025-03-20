@@ -1,0 +1,21 @@
+
+
+server:
+  port: 8081          # Set the server port
+  servlet:
+    context-path: /journalApp-dev   # Set the context path
+
+
+spring:
+  data:
+    mongodb:
+      auto-index-creation: true
+
+
+  redis:
+    host: localhost
+    port: 6379
+
+  #main:
+  # Uncomment this if you need to allow circular references
+  # allow-circular-references: true

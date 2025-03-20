@@ -1,0 +1,9 @@
+
+server:
+  port: 8081          # Set the server port
+  servlet:
+    context-path: /journalApp-prod   # Set the context path
+
+  main:
+  # Uncomment this if you need to allow circular references
+  # allow-circular-references: true
