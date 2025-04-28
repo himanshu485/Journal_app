@@ -33,4 +33,19 @@ jobs:
         aws-region: us-east-1
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync . s3://hp-junoon --delete
+      run: aws s3 sync . s3://hp-junoon --delete   
+      
+      - name: Spring boot image build jdk17
+  # You may pin to the exact commit or the version.
+  # uses: teheidoma/spring-boot-image-build-action-jdk17@37dabb42624700d79ef0b9afc7230254b81b4d40
+  uses: teheidoma/spring-boot-image-build-action-jdk17@0.0.3
+  with:
+    # registry username
+    registry_username: # optional
+    # registry password
+    registry_password: # optional
+    # registry hostname
+    registry_hostname: # optional, default is docker.io
+    # include commit SHA to image tag
+    include_commit_sha: # optional, default is false
+          
